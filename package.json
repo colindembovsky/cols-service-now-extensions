@@ -1,0 +1,24 @@
+{
+  "name": "colinsalmcorner-snow-extensions",
+  "version": "1.0.0",
+  "description": "Colin's ALM Corner Azure DevOps ServiceNow extensions",
+  "main": "",
+  "publisher": "colinsalmcorner",
+  "public": true,
+  "repository": {
+      "type": "git",
+      "uri": "https://github.com/colindembovsky/cols-service-now-extensions"
+  },
+  "license": "MIT",
+  "keywords": [
+    "service now",
+    "gates"
+  ],
+  "scripts": {
+    "init": "yarn install --no-progress",
+    "package": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json"
+  },
+  "devDependencies": {
+    "tfx-cli": "^0.6.3"
+  }
+}

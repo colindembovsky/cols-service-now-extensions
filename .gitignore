@@ -1,0 +1,16 @@
+dist/
+built/
+.vscode/
+
+node_modules/
+npm-debug.log
+
+Tasks/typings/
+
+*.vsix
+
+/.vs
+*.sqlite
+/slnx.VC.VC.opendb
+/slnx.VC.db
+.taskkey
