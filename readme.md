@@ -1,6 +1,6 @@
 # Colin's ALM Corner Service Now Azure DevOps Extensions
 
-For more info, read the [overview](overview.md).
+For more info, read the [overview](overview.md). See [this blog post](https://bit.ly/azdosnow) for how this extension was cretaed step-by-step.
 
 ## Packaging
 
