@@ -1,4 +1,4 @@
-# McDonalds Private Azure DevOps Extensions
+# Colin's ALM Corner ServiceNow Azure DevOps Extensions
 
 This extension is for ServiceNow extensions and includes:
 - Service Now Release Gate

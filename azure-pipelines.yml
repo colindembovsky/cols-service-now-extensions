@@ -1,0 +1,62 @@
+name: 1.0$(Rev:.r)
+resources:
+- repo: self
+queue:
+  name: Hosted Ubuntu 1604
+  demands: 
+  - npm
+  - DotNetFramework
+
+steps:
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@2
+  displayName: 'Use Yarn 1.x'
+  inputs:
+    checkLatest: true
+
+- script: 'yarn install' 
+  displayName: 'Run yarn install'
+
+- script: 'yarn package' 
+  displayName: 'Run yarn prepextension'
+
+- task: ms-devlabs.vsts-developer-tools-build-tasks.package-extension-build-task.PackageVSTSExtension@1
+  displayName: 'Package real Extension '
+  inputs:
+    rootFolder: '$(Build.SourcesDirectory)'
+    outputPath: '$(Build.ArtifactStagingDirectory)/colinsalmcorner.colinsalmcorner-snow-extentions-$(Build.BuildNumber).vsix'
+    publisherId: colinsalmcorner
+    extensionId: 'colinsalmcorner-snow-extensions'
+    extensionVersion: '$(Build.BuildNumber)'
+    updateTasksVersion: true
+    updateTasksVersionType: patch
+    cwd: '$(Build.SourcesDirectory)'
+
+- powershell: './Update-TaskIDs.ps1 -Beta'
+  displayName: 'PowerShell Update beta ids'
+  condition: eq(variables['Agent.OS'], 'Windows_NT')
+  failOnStderr: true
+
+- bash: 'sh update-taskids.sh beta' 
+  workingDirectory: '$(Build.SourcesDirectory)'
+  displayName: 'Bash Update beta ids'
+  condition: ne(variables['Agent.OS'], 'Windows_NT')
+  failOnStderr: true
+
+- task: ms-devlabs.vsts-developer-tools-build-tasks.package-extension-build-task.PackageVSTSExtension@1
+  displayName: 'Package beta Extension '
+  inputs:
+    outputPath: '$(Build.ArtifactStagingDirectory)/colinsalmcorner.colinsalmcorner-snow-extentions-beta-$(Build.BuildNumber).vsix'
+    publisherId: colinsalmcorner
+    extensionId: 'colinsalmcorner-snow-extensions'
+    extensionTag: beta
+    extensionVersion: '$(Build.BuildNumber)'
+    updateTasksVersion: true
+    updateTasksVersionType: patch
+    extensionVisibility: private
+    extensionPricing: free
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: vsix'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: vsix

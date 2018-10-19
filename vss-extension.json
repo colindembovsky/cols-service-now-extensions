@@ -3,7 +3,7 @@
     "id": "colinsalmcorner-snow-extensions",
     "publisher": "colinsalmcorner",
     "name": "Colin's ALM Corner Azure DevOps ServiceNow extensions",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "description": "Service Now extensions for Azure DevOps",
     "tags": [
       "Release",
@@ -32,6 +32,14 @@
         "path": "license.txt"
       }
     },
+    "screenshots": [
+      {
+        "path": "media/snow_gate.png"
+      },
+      {
+        "path": "media/snow_endpoint.png"
+      }
+    ],
     "links": {
       "home": {
         "uri": "http://colinsalmcorner.com"
@@ -42,6 +50,10 @@
       "issues": {
           "uri": "https://github.com/colindembovsky/cols-service-now-extensions/issues"
       }
+    },
+    "repository": {
+      "type": "git",
+      "uri": "https://github.com/colindembovsky/cols-service-now-extensions"
     },
     "files": [
       { "path": "Tasks/SnowChangeRequestGate" }
