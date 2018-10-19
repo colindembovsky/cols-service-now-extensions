@@ -4,6 +4,13 @@ This extension is for ServiceNow extensions and includes:
 - Service Now Release Gate
 
 ## Service Now Release Gate
+
+|Phase|Badge|
+|---|---
+|Build|![Build Status](https://colinsalmcorner.visualstudio.com/MarketPlace/_apis/build/status/ServiceNow%20Extensions)|
+|Beta Release|![Release Status](https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/6)|
+|Public Release|![Release Status](https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/7)|
+
 This release gate lets you specify a Change Request number and waits until the change request is in a specified state (default is `Implement`).
 
 To use the gate:

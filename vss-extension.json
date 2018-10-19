@@ -51,6 +51,20 @@
           "uri": "https://github.com/colindembovsky/cols-service-now-extensions/issues"
       }
     },
+    "badges": [
+      {
+        "uri": "https://colinsalmcorner.visualstudio.com/MarketPlace/_apis/build/status/ServiceNow%20Extensions",
+        "description": "Build"
+      },
+      {
+        "uri": "https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/6",
+        "description": "Beta Release"
+      },
+      {
+        "uri": "https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/7",
+        "description": "Public Release"
+      }
+    ],
     "repository": {
       "type": "git",
       "uri": "https://github.com/colindembovsky/cols-service-now-extensions"
