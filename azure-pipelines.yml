@@ -16,8 +16,8 @@ steps:
 - script: 'yarn install' 
   displayName: 'Run yarn install'
 
-- script: 'yarn package' 
-  displayName: 'Run yarn prepextension'
+- script: 'yarn package'
+  displayName: 'Run yarn package'
 
 - task: ms-devlabs.vsts-developer-tools-build-tasks.package-extension-build-task.PackageVSTSExtension@1
   displayName: 'Package real Extension '
