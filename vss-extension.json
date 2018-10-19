@@ -53,14 +53,17 @@
     },
     "badges": [
       {
+        "href": "https://colinsalmcorner.visualstudio.com/MarketPlace/_build?definitionId=33",
         "uri": "https://colinsalmcorner.visualstudio.com/MarketPlace/_apis/build/status/ServiceNow%20Extensions",
         "description": "Build"
       },
       {
+        "href": "https://colinsalmcorner.visualstudio.com/MarketPlace/_releases2?definitionId=4",
         "uri": "https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/6",
         "description": "Beta Release"
       },
       {
+        "href": "https://colinsalmcorner.visualstudio.com/MarketPlace/_releases2?definitionId=4",
         "uri": "https://colinsalmcorner.vsrm.visualstudio.com/_apis/public/Release/badge/34532943-412e-4dac-b314-a87833e22dd8/4/7",
         "description": "Public Release"
       }
