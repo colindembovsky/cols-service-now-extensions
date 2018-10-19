@@ -3,7 +3,7 @@
     "id": "colinsalmcorner-snow-extensions",
     "publisher": "colinsalmcorner",
     "name": "Colin's ALM Corner Azure DevOps ServiceNow extensions",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "Service Now extensions for Azure DevOps",
     "tags": [
       "Release",
@@ -13,7 +13,7 @@
     "icons": {
       "default": "media/snow-logo.png"
     },
-    "public": false,
+    "public": true,
     "targets": [
       {
         "id": "Microsoft.VisualStudio.Services"
